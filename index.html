@@ -1,1 +1,508 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>EcoDelivery: Sustainable Delivery Solutions</title>
+      <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+  
+          :root {
+              --primary-color: #4CAF50; /* Green */
+              --secondary-color: #FFC107; /* Amber */
+              --dark-color: #333;
+              --light-color: #f4f4f4;
+              --white-color: #fff;
+              --text-color: #555;
+              --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+              --transition-speed: 0.3s;
+          }
+  
+          * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+          }
+  
+          body {
+              font-family: 'Poppins', sans-serif;
+              line-height: 1.6;
+              color: var(--text-color);
+              background-color: var(--light-color);
+          }
+  
+          .container {
+              max-width: 1100px;
+              margin: auto;
+              overflow: hidden;
+              padding: 0 20px;
+          }
+  
+          /* Header & Navigation */
+          .header {
+              background: var(--white-color);
+              color: var(--dark-color);
+              padding: 1rem 0;
+              border-bottom: 3px solid var(--primary-color);
+          }
+  
+          .header .container {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+  
+          .logo {
+              font-size: 2rem;
+              font-weight: 700;
+              color: var(--primary-color);
+              text-decoration: none;
+          }
+          
+          .logo-small {
+              color: var(--dark-color);
+              font-weight: 300;
+          }
+  
+          .nav-links {
+              list-style: none;
+              display: flex;
+          }
+  
+          .nav-links li {
+              margin-left: 20px;
+          }
+  
+          .nav-links a {
+              color: var(--dark-color);
+              text-decoration: none;
+              font-weight: 600;
+              transition: color var(--transition-speed);
+          }
+  
+          .nav-links a:hover {
+              color: var(--primary-color);
+          }
+          
+          .cta-button {
+              background: var(--primary-color);
+              color: var(--white-color);
+              padding: 10px 20px;
+              border-radius: 5px;
+              text-decoration: none;
+              font-weight: 600;
+              transition: background var(--transition-speed);
+          }
+  
+          .cta-button:hover {
+              background: #388E3C; /* Darker green */
+          }
+          
+          /* Hero Section */
+          .hero {
+              background: url('https://images.unsplash.com/photo-1629853315694-5a7a1a0f968c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+              height: 80vh;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: var(--white-color);
+              text-align: center;
+              position: relative;
+          }
+          
+          .hero::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.5);
+          }
+          
+          .hero-content {
+              position: relative;
+              z-index: 1;
+          }
+  
+          .hero h1 {
+              font-size: 3.5rem;
+              margin-bottom: 1rem;
+              text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+          }
+  
+          .hero p {
+              font-size: 1.2rem;
+              margin-bottom: 2rem;
+              text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+          }
+  
+          /* Sections */
+          .section {
+              padding: 60px 0;
+          }
+  
+          .section-title {
+              text-align: center;
+              font-size: 2.5rem;
+              color: var(--dark-color);
+              margin-bottom: 40px;
+              position: relative;
+          }
+          
+          .section-title::after {
+              content: '';
+              width: 80px;
+              height: 4px;
+              background: var(--primary-color);
+              position: absolute;
+              bottom: -10px;
+              left: 50%;
+              transform: translateX(-50%);
+          }
+  
+          /* Features Section */
+          #features {
+              background: var(--white-color);
+          }
+  
+          .features-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+              gap: 30px;
+          }
+  
+          .feature-card {
+              background: var(--light-color);
+              padding: 30px;
+              text-align: center;
+              border-radius: 10px;
+              box-shadow: var(--card-shadow);
+              transition: transform var(--transition-speed);
+          }
+          
+          .feature-card:hover {
+              transform: translateY(-10px);
+          }
+  
+          .feature-card .icon {
+              font-size: 3rem;
+              color: var(--primary-color);
+              margin-bottom: 15px;
+          }
+          
+          .feature-card h3 {
+              font-size: 1.5rem;
+              margin-bottom: 10px;
+              color: var(--dark-color);
+          }
+  
+          /* Why Us Section */
+          #why-us {
+              background: var(--primary-color);
+              color: var(--white-color);
+          }
+          
+          #why-us .section-title {
+              color: var(--white-color);
+          }
+          
+          #why-us .section-title::after {
+              background: var(--secondary-color);
+          }
+  
+          .why-us-content {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
+              gap: 30px;
+          }
+          
+          .why-us-text {
+              flex: 1;
+              min-width: 300px;
+          }
+  
+          .why-us-text h2 {
+              font-size: 2.5rem;
+              margin-bottom: 1rem;
+          }
+          
+          .why-us-text p {
+              font-size: 1.1rem;
+              margin-bottom: 1.5rem;
+          }
+          
+          .why-us-list {
+              list-style: none;
+          }
+          
+          .why-us-list li {
+              font-size: 1.1rem;
+              margin-bottom: 10px;
+              position: relative;
+              padding-left: 25px;
+          }
+          
+          .why-us-list li::before {
+              content: '✓';
+              color: var(--secondary-color);
+              font-weight: 700;
+              position: absolute;
+              left: 0;
+          }
+          
+          .why-us-image {
+              flex: 1;
+              min-width: 300px;
+              text-align: center;
+          }
+          
+          .why-us-image img {
+              max-width: 100%;
+              height: auto;
+              border-radius: 10px;
+              box-shadow: var(--card-shadow);
+          }
+  
+          /* Testimonials Section */
+          #testimonials {
+              background: var(--white-color);
+          }
+  
+          .testimonial-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 30px;
+          }
+          
+          .testimonial-card {
+              background: var(--light-color);
+              padding: 30px;
+              border-radius: 10px;
+              box-shadow: var(--card-shadow);
+          }
+          
+          .testimonial-card .quote {
+              font-style: italic;
+              font-size: 1.1rem;
+              margin-bottom: 15px;
+              color: var(--text-color);
+          }
+          
+          .testimonial-card .author {
+              font-weight: 600;
+              color: var(--dark-color);
+          }
+  
+          /* Contact Section */
+          #contact {
+              background: var(--dark-color);
+              color: var(--white-color);
+          }
+          
+          #contact .section-title {
+              color: var(--white-color);
+          }
+          
+          #contact .section-title::after {
+              background: var(--primary-color);
+          }
+  
+          .contact-content {
+              text-align: center;
+          }
+          
+          .contact-content p {
+              font-size: 1.2rem;
+              margin-bottom: 30px;
+          }
+  
+          .contact-form {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              max-width: 600px;
+              margin: auto;
+          }
+          
+          .contact-form input,
+          .contact-form textarea {
+              padding: 15px;
+              border: none;
+              border-radius: 5px;
+              font-family: inherit;
+          }
+          
+          .contact-form button {
+              background: var(--primary-color);
+              color: var(--white-color);
+              padding: 15px;
+              border: none;
+              border-radius: 5px;
+              font-size: 1rem;
+              font-weight: 600;
+              cursor: pointer;
+              transition: background var(--transition-speed);
+          }
+          
+          .contact-form button:hover {
+              background: #388E3C;
+          }
+  
+          /* Footer */
+          .footer {
+              background: var(--dark-color);
+              color: var(--light-color);
+              text-align: center;
+              padding: 2rem 0;
+              border-top: 3px solid var(--primary-color);
+          }
+  
+          .footer .social-links {
+              margin-bottom: 1rem;
+          }
+          
+          .footer .social-links a {
+              color: var(--light-color);
+              font-size: 1.5rem;
+              margin: 0 10px;
+              transition: color var(--transition-speed);
+          }
+          
+          .footer .social-links a:hover {
+              color: var(--primary-color);
+          }
+          
+          /* Font Awesome Icons - You'd link to this library in a real project */
+          .fa-leaf, .fa-bicycle, .fa-bolt, .fa-shipping-fast, .fa-star, .fa-envelope, .fa-phone, .fa-map-marker-alt, .fa-truck {
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+          }
+      </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+  <body>
+  
+      <header class="header">
+          <div class="container">
+              <a href="#" class="logo">Eco<span class="logo-small">Delivery</span></a>
+              <nav>
+                  <ul class="nav-links">
+                      <li><a href="#features">Features</a></li>
+                      <li><a href="#why-us">Why Us</a></li>
+                      <li><a href="#testimonials">Testimonials</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                      <li><a href="#" class="cta-button">Get a Quote</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+  
+      <section class="hero">
+          <div class="hero-content">
+              <h1>Delivering a Greener Tomorrow</h1>
+              <p>Sustainable and reliable delivery services for your business and personal needs. Fast, efficient, and eco-friendly.</p>
+              <a href="#contact" class="cta-button">Start Your Eco-Delivery Today</a>
+          </div>
+      </section>
+      
+      <section id="features" class="section">
+          <div class="container">
+              <h2 class="section-title">Our Eco-Friendly Services</h2>
+              <div class="features-grid">
+                  <div class="feature-card">
+                      <i class="fas fa-bicycle icon"></i>
+                      <h3>Bike Couriers</h3>
+                      <p>Fast and silent deliveries in urban areas, reducing traffic congestion and emissions.</p>
+                  </div>
+                  <div class="feature-card">
+                      <i class="fas fa-bolt icon"></i>
+                      <h3>Electric Vehicles</h3>
+                      <p>Zero-emission deliveries for larger packages and longer distances with our EV fleet.</p>
+                  </div>
+                  <div class="feature-card">
+                      <i class="fas fa-box-open icon"></i>
+                      <h3>Sustainable Packaging</h3>
+                      <p>We use recyclable and biodegradable materials to minimize waste from every package.</p>
+                  </div>
+                  <div class="feature-card">
+                      <i class="fas fa-map-marked-alt icon"></i>
+                      <h3>Optimized Routes</h3>
+                      <p>Our smart routing technology ensures the most efficient paths, saving time and fuel.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <section id="why-us" class="section">
+          <div class="container">
+              <h2 class="section-title">Why Choose EcoDelivery?</h2>
+              <div class="why-us-content">
+                  <div class="why-us-text">
+                      <p>We believe that a great delivery service shouldn't come at the cost of the planet. Our commitment to sustainability is at the core of everything we do. By choosing EcoDelivery, you're not just getting your items delivered, you're contributing to a healthier environment.</p>
+                      <ul class="why-us-list">
+                          <li>Reduce your carbon footprint with every shipment.</li>
+                          <li>Support a mission-driven, environmentally conscious company.</li>
+                          <li>Enjoy reliable, on-time delivery from our professional team.</li>
+                          <li>Receive transparent tracking and real-time updates.</li>
+                      </ul>
+                  </div>
+                  <div class="why-us-image">
+                      
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <section id="testimonials" class="section">
+          <div class="container">
+              <h2 class="section-title">What Our Clients Say</h2>
+              <div class="testimonial-grid">
+                  <div class="testimonial-card">
+                      <div class="quote">"EcoDelivery has been a game-changer for our small business. Our customers love that we're using a sustainable delivery service. The team is professional, and the service is always on time."</div>
+                      <div class="author">- Ashok D., Founder of Green Bites Cafe</div>
+                  </div>
+                  <div class="testimonial-card">
+                      <div class="quote">"I switched to EcoDelivery for all my online purchases. It's so easy to use, and knowing my delivery isn't contributing to pollution makes me feel great. Highly recommend!"</div>
+                      <div class="author">- Amita S., Individual Customer</div>
+                  </div>
+                  <div class="testimonial-card">
+                      <div class="quote">"Their electric vehicle fleet is impressive. We've significantly reduced our carbon footprint since partnering with them. A top-notch service with an even better mission."</div>
+                      <div class="author">- Shobna L., Operations Manager at Tech Innovations Inc.</div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <section id="contact" class="section">
+          <div class="container">
+              <h2 class="section-title">Get in Touch</h2>
+              <div class="contact-content">
+                  <p>Ready to make the switch to a greener delivery service? We're here to help! Fill out the form below or reach out to us directly.</p>
+                  <form class="contact-form">
+                      <input type="text" placeholder="Your Name" required>
+                      <input type="email" placeholder="Your Email" required>
+                      <textarea placeholder="Your Message or Quote Request" rows="5" required></textarea>
+                      <button type="submit">Send Message</button>
+                  </form>
+              </div>
+          </div>
+      </section>
+      
+      <footer class="footer">
+          <div class="container">
+              <a href="#" class="logo">Eco<span class="logo-small" style="color:white">Delivery</span></a>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <p>&copy; 2025 EcoDelivery. All Rights Reserved.</p>
+          </div>
+      </footer>
+  
+  </body>
+</html>
