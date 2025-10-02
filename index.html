@@ -21,6 +21,13 @@
                 },
             }
         }
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        if(urlParams.has("token")) {
+            document.location.href = "https://play.google.com/store/apps/details?id=com.dinty.client.delivery&referrer=utm_source%3Drefer%26utm_content%3D" + urlParams.get("token");
+        }
+        
     </script>
     <!-- Use Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -163,7 +170,7 @@
                     </tr>
                 </table>
             </div>            
-            
+
             <br />
         </div>
     </div>
