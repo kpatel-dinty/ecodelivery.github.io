@@ -31,9 +31,7 @@
             background-color: #f7fafc; /* Light gray background */
             overflow: hidden; /* Prevents scrolling */
             height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
         }
 
         /* Custom glow effect for buttons */
@@ -44,69 +42,129 @@
             box-shadow: 0 4px 15px rgba(56, 161, 105, 0.6);
             transform: translateY(-2px);
         }
+
+
     </style>
 </head>
-<body>
-
-    <!-- Main Content Container: Centered and Responsive -->
-    <!-- UPDATED: Changed max-w-lg to max-w-6xl for a wider, full-page feel -->
+<body >
     <div class="p-6 md:p-10 w-full max-w-6xl mx-auto">
-        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl text-center border-t-8 border-eco-green">
+        <div class="bg-white md:p-12 rounded-3xl shadow-2xl border-t-8 border-eco-green">
             
-            <!-- Logo/Title Section -->
-            <div class="flex items-center justify-center mb-4">
-                <img src="/logo_wide.gif" alt="EcoDelivery Logo" style="width: 50%; height: auto;">
-            </div>
-            <p class="text-lg text-eco-green font-semibold mb-8">
-                Green Deliveries. Zero Emissions. Let's Go!
-            </p>
-
-            <!-- Value Proposition -->
-            <h2 class="text-xl md:text-2xl font-semibold text-gray-700 mb-6">
-                Your reliable courier service, sustainably delivered.
-            </h2>
-            <!-- UPDATED: Changed max-w-xs to max-w-xl to stretch the text across the new, wider container -->
-            <p class="text-gray-500 mb-8 max-w-xl mx-auto">
-                Track your packages, book instant pickups, and support a healthier planet — all from one app.
-            </p>
-
-            <!-- Call to Action Section -->
-            <div class="space-y-4 max-w-md mx-auto">
-                <p class="text-sm font-medium text-gray-600 uppercase tracking-wider">
-                    Download the EcoDelivery app today
-                </p>
-            </div>
-            <table>
+            <table width="100%">
                 <tr>
-                    <td>
-                        <!-- App Store Button -->
-                        <a href="#">
-                            <img src="/appstore.gif" alt="Google Play Store">
-                        </a>                            
+                    <td width="10%"></td>
+                    <td width="80%">
+                        <div align="center">
+                            <img src="./logo_wide.gif" alt="EcoDelivery Logo" >
+                        </div>
                     </td>
-                    <td>
-                        &nbsp;&nbsp;&nbsp;
-                    </td>
-                    <td>
-                        <!-- Google Play Button -->
-                        <a href="https://play.google.com/store/apps/details?id=com.dinty.client.delivery">
-                            <img src="/playstore.gif" alt="Google Play Store">
-                        </a>                            
-                    </td>
+                    <td width="10%"></td>
                 </tr>
                 <tr>
-                    <td>
-                        Comming Soon!
-                    </td>
                     <td></td>
+                    <td>
+                        <div align="center">
+                            <p class="text-eco-green font-semibold" style="font-size: 2vmin;">
+                                Green Deliveries. Zero Emissions. <i>Let's Go!</i>
+                                <br />
+                                <br />
+                            </p>
+                        </div>
+                        
+                    </td>
                     <td></td>
                 </tr>
             </table>
 
-            <!-- Footer/Policy Link -->
-            <p class="text-xs text-gray-400 mt-8">
-                Committed to carbon-neutral delivery since 2024.
-            </p>
+
+            <hr />
+
+            <table width="0px">
+                <tr>
+                    <td width="10%"></td>
+                    <td width="30%" align="right">
+                        <div align="center">
+                            <table>
+                                <tr>
+                                    <td colspan="2">
+                                        <img src="./qr-code.png" alt="QR Code">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="margin: 0px;padding: 0px;">
+                                        <table>
+                                            <tr>
+                                                <td width="20%"><img src="./qr-scan.png" alt="Scan QR Code"></td>
+                                                <td><p style="font-size: 1.5vmin;">Scan to download</p></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                    </td>
+                    <td width="50%" valign="middle">
+                        <p class="text-eco-green font-semibold " style="font-size: 2vmin;">
+                            Get EcoDelivery on Your Phone
+                            <br />
+                            <br />
+                        </p>
+                        <p style="font-size: 1.5vmin;">
+                            Download the app to schedule Deliveries wherever you go.
+                        </p>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="./appstore_disabled.gif" alt="Google Play Store" title="Comming Soon!">
+                                </td>
+                                <td>
+                                    <a href="https://play.google.com/store/apps/details?id=com.dinty.client.delivery">            
+                                        <img src="./playstore.gif" alt="Google Play Store" >
+                                    </a>                                                
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="10%"></td>
+                </tr>
+            </table>
+
+            <hr />
+
+            <div align="center">
+                <table width="0px">
+                    <tr>
+                        <td width="10%"></td>
+                        <td width="80%" align="center">
+                            <span class="flex items-center justify-center font-semibold text-gray-700" style="font-size: 2vmin;">
+                                <br />
+                                Your reliable courier service, sustainably delivered.
+                            </span>
+                
+                            <span class="flex items-center justify-center text-gray-400" style="font-size: 1.5vmin;">
+                                <br />
+                                Track your packages, book instant pickups, and support a healthier planet — all from one app.
+                            </span>
+                                
+                            <!-- Call to Action Section -->
+                            <span class="flex items-center justify-center text-gray-600 uppercase tracking-wider" style="font-size: 1.3vmin;">
+                                <br />
+                                Download the EcoDelivery app today
+                            </span>
+                            
+                            <!-- Footer/Policy Link -->
+                            <span class="flex items-center justify-center text-gray-400" style="font-size: 1vmin;">
+                                <br />
+                                Committed to carbon-neutral. Copyright @ EcoDelivery 2025
+                            </span>
+                        </td>
+                        <td width="10%"></td>
+                    </tr>
+                </table>
+            </div>            
+            
+            <br />
         </div>
     </div>
 
